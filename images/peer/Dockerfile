@@ -11,6 +11,7 @@ RUN apk add --no-cache tzdata
 # - https://github.com/golang/go/blob/go1.9.1/src/net/conf.go#L194-L275
 # - docker run --rm debian:stretch grep '^hosts:' /etc/nsswitch.conf
 RUN echo 'hosts: files dns' > /etc/nsswitch.conf
+RUN echo 'hej'
 
 FROM golang:${GO_VER}-alpine${ALPINE_VER} as golang
 RUN apk add --no-cache \
